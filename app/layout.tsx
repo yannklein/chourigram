@@ -6,7 +6,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'VidGram - Share Your Video Stories',
+  title: 'Chourigram - The better, more spiky Instagram',
   description: 'A video-first social platform for sharing your moments',
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
   themeColor: '#000000',

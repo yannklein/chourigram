@@ -2,7 +2,8 @@
 
 import { Plus } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { mockUsers } from '@/lib/mock-data';
+import users from '@/lib/generated-users.json';
+
 
 export function StoryBar() {
   return (
@@ -13,7 +14,7 @@ export function StoryBar() {
           <div className="flex flex-col items-center gap-2 min-w-[70px]">
             <div className="relative">
               <Avatar className="w-16 h-16 border-2 border-gray-300 dark:border-gray-600">
-                <AvatarImage src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2" />
+                <AvatarImage src="dri_avatar.jpg" />
                 <AvatarFallback>You</AvatarFallback>
               </Avatar>
               <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center border-2 border-white dark:border-black">
@@ -24,7 +25,7 @@ export function StoryBar() {
           </div>
 
           {/* Other Stories */}
-          {mockUsers.map((user) => (
+          {users.map((user) => (
             <div key={user.id} className="flex flex-col items-center gap-2 min-w-[70px]">
               <div className="relative">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 p-0.5">

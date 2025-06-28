@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "username": "dani_avatar",
+    "displayName": "Dani",
+    "avatar": "assets/avatars/dani_avatar.jpg",
+    "isVerified": true,
+    "followers": 583,
+    "following": 730
+  },
+  {
+    "id": "2",
+    "username": "doug_avatar",
+    "displayName": "Doug",
+    "avatar": "assets/avatars/doug_avatar.jpg",
+    "isVerified": false,
+    "followers": 666,
+    "following": 694
+  },
+  {
+    "id": "3",
+    "username": "marcela_avatar",
+    "displayName": "Marcela",
+    "avatar": "assets/avatars/marcela_avatar.jpg",
+    "isVerified": true,
+    "followers": 685,
+    "following": 801
+  },
+  {
+    "id": "4",
+    "username": "patty_avatar",
+    "displayName": "Patty",
+    "avatar": "assets/avatars/patty_avatar.jpg",
+    "isVerified": false,
+    "followers": 586,
+    "following": 367
+  },
+  {
+    "id": "5",
+    "username": "sergio_avatar",
+    "displayName": "Sergio",
+    "avatar": "assets/avatars/sergio_avatar.jpg",
+    "isVerified": true,
+    "followers": 552,
+    "following": 1014
+  },
+  {
+    "id": "6",
+    "username": "sylvain_avatar",
+    "displayName": "Sylvain",
+    "avatar": "assets/avatars/sylvain_avatar.jpg",
+    "isVerified": false,
+    "followers": 647,
+    "following": 422
+  },
+  {
+    "id": "7",
+    "username": "yako_avatar",
+    "displayName": "Yako",
+    "avatar": "assets/avatars/yako_avatar.jpg",
+    "isVerified": false,
+    "followers": 668,
+    "following": 460
+  },
+  {
+    "id": "8",
+    "username": "yann_avatar",
+    "displayName": "Yann",
+    "avatar": "assets/avatars/yann_avatar.jpg",
+    "isVerified": true,
+    "followers": 550,
+    "following": 636
+  }
+]

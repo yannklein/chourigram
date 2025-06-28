@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { Heart, MessageCircle, Send } from 'lucide-react';
@@ -10,14 +11,18 @@ export function TopNav() {
       <div className="max-w-md mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">V</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img
+                src="logo_gradient_fixed.png"
+                alt="Hedgehog Logo"
+                className="h-12"
+              />
             </div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              VidGram
+              Chourigram
             </h1>
           </div>
-          
+
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <Button variant="ghost" size="sm" className="p-2">

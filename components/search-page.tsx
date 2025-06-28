@@ -4,7 +4,9 @@ import { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { mockVideos, mockUsers } from '@/lib/mock-data';
+import { mockVideos } from '@/lib/mock-data';
+import users from '@/lib/generated-users.json';
+
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export function SearchPage() {
@@ -16,7 +18,7 @@ export function SearchPage() {
     video.user.username.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredUsers = mockUsers.filter(user =>
+  const filteredUsers = users.filter(user =>
     user.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
     user.displayName.toLowerCase().includes(searchQuery.toLowerCase())
   );
