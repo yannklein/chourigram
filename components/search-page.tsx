@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { mockVideos } from '@/lib/mock-data';
 import users from '@/lib/generated-users.json';
+import Image from 'next/image';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -13,13 +13,7 @@ export function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('top');
 
-  const filteredVideos = mockVideos.filter(video => 
-    video.caption.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    video.user.username.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
   const filteredUsers = users.filter(user =>
-    user.username.toLowerCase().includes(searchQuery.toLowerCase()) ||
     user.displayName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -74,10 +68,10 @@ export function SearchPage() {
           // Explore Grid when no search
           <div className="p-1">
             <div className="grid grid-cols-3 gap-1">
-              {mockVideos.concat(mockVideos).map((video, index) => (
-                <div key={`${video.id}-${index}`} className="aspect-square bg-gray-100 dark:bg-gray-900 relative">
-                  <img
-                    src={video.thumbnail}
+              {users.filter( u => u.videoThumbnail ).map((user, index) => (
+                <div key={`${user.id}-${index}`} className="aspect-square bg-gray-100 dark:bg-gray-900 relative">
+                  <Image
+                    src={user.videoThumbnail || ""}
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -118,14 +112,14 @@ export function SearchPage() {
               </div>
             )}
 
-            {(activeTab === 'top' || activeTab === 'videos') && filteredVideos.length > 0 && (
+            {(activeTab === 'top' || activeTab === 'videos') && filteredUsers.length > 0 && (
               <div>
                 <h3 className="px-4 py-3 text-sm font-semibold text-gray-600 dark:text-gray-400">Videos</h3>
                 <div className="grid grid-cols-3 gap-1 px-1">
-                  {filteredVideos.map((video) => (
-                    <div key={video.id} className="aspect-square bg-gray-100 dark:bg-gray-900 relative">
-                      <img
-                        src={video.thumbnail}
+                  {filteredUsers.filter( u => u.videoThumbnail).map((user) => (
+                    <div key={user.id} className="aspect-square bg-gray-100 dark:bg-gray-900 relative">
+                      <Image
+                        src={user.videoThumbnail || ""}
                         alt=""
                         className="w-full h-full object-cover"
                       />
@@ -136,7 +130,7 @@ export function SearchPage() {
               </div>
             )}
 
-            {filteredUsers.length === 0 && filteredVideos.length === 0 && searchQuery && (
+            {filteredUsers.length === 0 && searchQuery && (
               <div className="flex flex-col items-center justify-center py-20 text-center">
                 <div className="w-20 h-20 bg-gray-100 dark:bg-gray-900 rounded-full flex items-center justify-center mb-4">
                   <Search className="w-8 h-8 text-gray-400" />

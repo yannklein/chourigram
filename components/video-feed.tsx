@@ -2,19 +2,19 @@
 
 import { useState, useEffect } from 'react';
 import { VideoCard } from '@/components/ui/video-card';
-import { mockVideos } from '@/lib/mock-data';
+import users from '@/lib/generated-users.json';
 
 export function VideoFeed() {
-  const [videos, setVideos] = useState(mockVideos);
+  const [usersWithVideo, setUsersWithVideo] = useState(users.filter(u => u.video));
   const [isLoading, setIsLoading] = useState(false);
 
-  const loadMoreVideos = () => {
+  const loadMoreUsersWithVideo = () => {
     setIsLoading(true);
-    // Simulate loading more videos
+    // Simulate loading more usersWithVideo
     setTimeout(() => {
-      setVideos(prev => [...prev, ...mockVideos.map(video => ({
-        ...video,
-        id: video.id + '_' + Date.now(),
+      setUsersWithVideo(prev => [...prev, ...users.filter(u => u.video).map(u => ({
+        ...u,
+        id: u.id + '_' + Date.now(),
       }))]);
       setIsLoading(false);
     }, 1000);
@@ -24,7 +24,7 @@ export function VideoFeed() {
     const handleScroll = () => {
       if (window.innerHeight + document.documentElement.scrollTop 
           >= document.documentElement.offsetHeight - 1000 && !isLoading) {
-        loadMoreVideos();
+        loadMoreUsersWithVideo();
       }
     };
 
@@ -34,8 +34,8 @@ export function VideoFeed() {
 
   return (
     <div className="max-w-md mx-auto bg-white dark:bg-black min-h-screen">
-      {videos.map((video) => (
-        <VideoCard key={video.id} video={video} />
+      {usersWithVideo.map((u) => (
+        <VideoCard key={u.id} user={u} />
       ))}
       {isLoading && (
         <div className="flex justify-center items-center py-8">

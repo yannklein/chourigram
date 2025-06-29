@@ -1,24 +1,47 @@
 'use client';
 
 import { useState } from 'react';
-import { Heart, MessageCircle, Send, Bookmark, MoreHorizontal } from 'lucide-react';
+import {
+  Heart,
+  MessageCircle,
+  Send,
+  Bookmark,
+  MoreHorizontal,
+} from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { VideoPlayer } from '@/components/ui/video-player';
-import { Video } from '@/lib/mock-data';
 
-interface VideoCardProps {
-  video: Video;
-}
+const randomDate = () => {
+  const now = new Date();
+  const tenDaysAgo = new Date();
+  tenDaysAgo.setDate(now.getDate() - 10);
+  const randomTimestamp =
+    Math.random() * (now.getTime() - tenDaysAgo.getTime()) +
+    tenDaysAgo.getTime();
+  return new Date(randomTimestamp).toLocaleDateString();
+};
 
-export function VideoCard({ video }: VideoCardProps) {
-  const [isLiked, setIsLiked] = useState(video.isLiked);
-  const [likes, setLikes] = useState(video.likes);
+type User = {
+  id: string;
+  username: string;
+  displayName: string;
+  avatar: string;
+  videoThumbnail: string | null;
+  video: string | null;
+  isVerified: boolean;
+  followers: number;
+  following: number;
+};
+
+export function VideoCard({ user }: { user: User }) {
+  const [isLiked, setIsLiked] = useState(false);
+  const [likes, setLikes] = useState(Math.floor(Math.random() * 10000) + 1000);
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   const handleLike = () => {
     setIsLiked(!isLiked);
-    setLikes(prev => isLiked ? prev - 1 : prev + 1);
+    setLikes((prev) => (isLiked ? prev - 1 : prev + 1));
   };
 
   const handleBookmark = () => {
@@ -41,14 +64,14 @@ export function VideoCard({ video }: VideoCardProps) {
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center gap-3">
           <Avatar className="w-8 h-8">
-            <AvatarImage src={video.user.avatar} />
-            <AvatarFallback>{video.user.username[0].toUpperCase()}</AvatarFallback>
+            <AvatarImage src={user.avatar} />
+            <AvatarFallback>{user.username[0].toUpperCase()}</AvatarFallback>
           </Avatar>
           <div className="flex items-center gap-2">
             <span className="font-semibold text-sm text-gray-900 dark:text-white">
-              {video.user.username}
+              {user.username}
             </span>
-            {video.user.isVerified && (
+            {user.isVerified && (
               <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
                 <span className="text-white text-xs">✓</span>
               </div>
@@ -63,9 +86,10 @@ export function VideoCard({ video }: VideoCardProps) {
       {/* Video */}
       <div className="relative">
         <VideoPlayer
-          src={video.videoUrl}
-          poster={video.thumbnail}
+          src={user.video || ""}
+          // poster property removed as it's not supported by VideoPlayerProps
           className="w-full aspect-square object-cover"
+          thumbnail={''}
         />
       </div>
 
@@ -77,7 +101,9 @@ export function VideoCard({ video }: VideoCardProps) {
               variant="ghost"
               size="sm"
               onClick={handleLike}
-              className={`p-0 hover:bg-transparent ${isLiked ? 'animate-heart' : ''}`}
+              className={`p-0 hover:bg-transparent ${
+                isLiked ? 'animate-heart' : ''
+              }`}
             >
               <Heart
                 className={`w-6 h-6 ${
@@ -87,10 +113,18 @@ export function VideoCard({ video }: VideoCardProps) {
                 }`}
               />
             </Button>
-            <Button variant="ghost" size="sm" className="p-0 hover:bg-transparent">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="p-0 hover:bg-transparent"
+            >
               <MessageCircle className="w-6 h-6 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300" />
             </Button>
-            <Button variant="ghost" size="sm" className="p-0 hover:bg-transparent">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="p-0 hover:bg-transparent"
+            >
               <Send className="w-6 h-6 text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300" />
             </Button>
           </div>
@@ -120,24 +154,21 @@ export function VideoCard({ video }: VideoCardProps) {
         {/* Caption */}
         <div className="mb-2">
           <span className="font-semibold text-sm text-gray-900 dark:text-white mr-2">
-            {video.user.username}
-          </span>
-          <span className="text-sm text-gray-900 dark:text-white">
-            {video.caption}
+            {user.username}
           </span>
         </div>
 
         {/* Comments */}
-        {video.comments > 0 && (
+        {/* {video.comments > 0 && (
           <button className="text-sm text-gray-500 dark:text-gray-400 mb-2">
             View all {formatNumber(video.comments)} comments
           </button>
-        )}
+        )} */}
 
         {/* Time */}
-        <div className="text-xs text-gray-500 dark:text-gray-400">
-          {new Date(video.createdAt).toLocaleDateString()}
-        </div>
+        <span className="text-sm text-gray-500 dark:text-gray-400">
+          {randomDate()}
+        </span>
       </div>
     </div>
   );
