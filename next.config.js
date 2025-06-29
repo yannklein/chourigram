@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   basePath: '/chourigram',
   assetPrefix: '/chourigram/',
+  distDir: 'dist',
   eslint: {
     ignoreDuringBuilds: true,
   },
