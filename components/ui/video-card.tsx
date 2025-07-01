@@ -84,7 +84,7 @@ export function VideoCard({ user }: { user: User }) {
         <VideoPlayer
           src={user.video || ''}
           // poster property removed as it's not supported by VideoPlayerProps
-          className="w-full aspect-square object-cover"
+          className="w-full object-cover"
           thumbnail={''}
         />
       </div>
@@ -146,20 +146,6 @@ export function VideoCard({ user }: { user: User }) {
             {/* {likes} likes */}
           </span>
         </div>
-
-        {/* Caption */}
-        <div className="mb-2">
-          <span className="font-semibold text-sm text-gray-900 dark:text-white mr-2">
-            {user.username}
-          </span>
-        </div>
-
-        {/* Comments */}
-        {/* {video.comments > 0 && (
-          <button className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-            View all {formatNumber(video.comments)} comments
-          </button>
-        )} */}
 
         {/* Time */}
         <span className="text-sm text-gray-500 dark:text-gray-400">

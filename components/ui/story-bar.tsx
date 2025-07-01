@@ -36,7 +36,7 @@ export function StoryBar() {
                 </div>
               </div>
               <span className="text-xs text-gray-600 dark:text-gray-400 text-center truncate w-full">
-                {user.username}
+                {user.displayName}
               </span>
             </div>
           ))}
