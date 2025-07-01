@@ -17,7 +17,7 @@ export function VideoPlayer({
   src, 
   thumbnail, 
   autoplay = false, 
-  muted = true, 
+  muted = false, 
   className,
   onVideoClick 
 }: VideoPlayerProps) {
@@ -115,7 +115,7 @@ export function VideoPlayer({
         "absolute inset-0 bg-black/20 transition-opacity duration-300",
         showControls ? "opacity-100" : "opacity-0"
       )}>
-        <div className="absolute top-4 right-4 flex gap-2">
+        <div className="absolute top-4 right-4 flex gap-2 z-10">
           <button
             onClick={toggleMute}
             className="p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
@@ -128,7 +128,7 @@ export function VideoPlayer({
           </button>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center z-5">
           <button
             onClick={togglePlay}
             className="p-4 bg-black/50 rounded-full text-white hover:bg-black/70 transition-all hover:scale-110"
