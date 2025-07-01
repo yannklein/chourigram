@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Heart,
   MessageCircle,
@@ -13,12 +13,15 @@ import { Button } from '@/components/ui/button';
 import { VideoPlayer } from '@/components/ui/video-player';
 
 const randomDate = () => {
-  const now = new Date();
-  const tenDaysAgo = new Date();
+  const now = new Date('2025-07-05T00:00:00Z'); // Fixed date for consistency
+  const tenDaysAgo = new Date('2025-06-25T00:00:00Z'); // Fixed date for consistency
   tenDaysAgo.setDate(now.getDate() - 10);
-  const randomTimestamp =
-    Math.random() * (now.getTime() - tenDaysAgo.getTime()) +
-    tenDaysAgo.getTime();
+  let randomTimestamp = 0;
+  if (typeof window !== 'undefined') {
+    randomTimestamp =
+      Math.random() * (now.getTime() - tenDaysAgo.getTime()) +
+      tenDaysAgo.getTime();
+  }
   return new Date(randomTimestamp).toLocaleDateString();
 };
 
@@ -36,8 +39,24 @@ type User = {
 
 export function VideoCard({ user }: { user: User }) {
   const [isLiked, setIsLiked] = useState(false);
-  const [likes, setLikes] = useState(Math.floor(Math.random() * 10000) + 1000);
+  const [likes, setLikes] = useState(typeof window !== 'undefined' ? Math.floor(Math.random() * 10000) + 1000 : 0);
+  const [date, setDate] = useState<string | null>(null);
+
   const [isBookmarked, setIsBookmarked] = useState(false);
+
+  useEffect(() => {
+    const likesCount = Math.floor(Math.random() * 10000) + 1000;
+    setLikes(likesCount);
+  
+    const now = new Date('2025-07-05T00:00:00Z');
+    const tenDaysAgo = new Date('2025-06-25T00:00:00Z');
+    tenDaysAgo.setDate(now.getDate() - 10);
+    const randomTimestamp =
+      Math.random() * (now.getTime() - tenDaysAgo.getTime()) +
+      tenDaysAgo.getTime();
+    const formattedDate = new Date(randomTimestamp).toLocaleDateString();
+    setDate(formattedDate);
+  }, []);
 
   const handleLike = () => {
     setIsLiked(!isLiked);
@@ -86,7 +105,7 @@ export function VideoCard({ user }: { user: User }) {
       {/* Video */}
       <div className="relative">
         <VideoPlayer
-          src={user.video || ""}
+          src={user.video || ''}
           // poster property removed as it's not supported by VideoPlayerProps
           className="w-full aspect-square object-cover"
           thumbnail={''}
@@ -147,7 +166,7 @@ export function VideoCard({ user }: { user: User }) {
         {/* Likes */}
         <div className="mb-2">
           <span className="font-semibold text-sm text-gray-900 dark:text-white">
-            {formatNumber(likes)} likes
+            {likes} likes
           </span>
         </div>
 
@@ -167,7 +186,7 @@ export function VideoCard({ user }: { user: User }) {
 
         {/* Time */}
         <span className="text-sm text-gray-500 dark:text-gray-400">
-          {randomDate()}
+          {date}
         </span>
       </div>
     </div>

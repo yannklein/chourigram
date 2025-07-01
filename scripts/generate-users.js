@@ -34,9 +34,9 @@ const users = avatarFiles.map((fileName, index) => {
     videoThumbnail: videoExists ? `assets/thumbnails/${thumbnailName}` : null,
     video: videoExists ? `assets/videos/${videoName}` : null,
 
-    isVerified: Math.random() > 0.5,
-    followers: Math.floor(Math.random() * 200) + 500,
-    following: Math.floor(Math.random() * 1000) + 100,
+    isVerified: typeof window !== 'undefined' ? Math.random() > 0.5 : false,
+    followers: typeof window !== 'undefined' ? Math.floor(Math.random() * 200) + 500 : 0,
+    following: typeof window !== 'undefined' ? Math.floor(Math.random() * 1000) + 100 : 0,
   };
 });
 

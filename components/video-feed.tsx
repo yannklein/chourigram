@@ -12,9 +12,9 @@ export function VideoFeed() {
     setIsLoading(true);
     // Simulate loading more usersWithVideo
     setTimeout(() => {
-      setUsersWithVideo(prev => [...prev, ...users.filter(u => u.video).map(u => ({
+      setUsersWithVideo(prev => [...prev, ...users.filter(u => u.video).map((u, index) => ({
         ...u,
-        id: u.id + '_' + Date.now(),
+        id: u.id + '_' + index // Ensure unique IDs,
       }))]);
       setIsLoading(false);
     }, 1000);

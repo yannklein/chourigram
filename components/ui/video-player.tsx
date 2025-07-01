@@ -64,6 +64,8 @@ export function VideoPlayer({
   };
 
   const toggleMute = (e: React.MouseEvent) => {
+    console.log("muted");
+    
     e.stopPropagation();
     const video = videoRef.current;
     if (!video) return;
