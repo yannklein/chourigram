@@ -12,19 +12,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { VideoPlayer } from '@/components/ui/video-player';
 
-const randomDate = () => {
-  const now = new Date('2025-07-05T00:00:00Z'); // Fixed date for consistency
-  const tenDaysAgo = new Date('2025-06-25T00:00:00Z'); // Fixed date for consistency
-  tenDaysAgo.setDate(now.getDate() - 10);
-  let randomTimestamp = 0;
-  if (typeof window !== 'undefined') {
-    randomTimestamp =
-      Math.random() * (now.getTime() - tenDaysAgo.getTime()) +
-      tenDaysAgo.getTime();
-  }
-  return new Date(randomTimestamp).toLocaleDateString();
-};
-
 type User = {
   id: string;
   username: string;
@@ -67,16 +54,6 @@ export function VideoCard({ user }: { user: User }) {
     setIsBookmarked(!isBookmarked);
   };
 
-  const formatNumber = (num: number) => {
-    if (num >= 1000000) {
-      return (num / 1000000).toFixed(1) + 'M';
-    }
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'K';
-    }
-    return num.toString();
-  };
-
   return (
     <div className="bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800">
       {/* Header */}
@@ -88,7 +65,7 @@ export function VideoCard({ user }: { user: User }) {
           </Avatar>
           <div className="flex items-center gap-2">
             <span className="font-semibold text-sm text-gray-900 dark:text-white">
-              {user.username}
+              {user.displayName}
             </span>
             {user.isVerified && (
               <div className="w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
@@ -166,7 +143,7 @@ export function VideoCard({ user }: { user: User }) {
         {/* Likes */}
         <div className="mb-2">
           <span className="font-semibold text-sm text-gray-900 dark:text-white">
-            {likes} likes
+            {/* {likes} likes */}
           </span>
         </div>
 

@@ -24,7 +24,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
-      <body className={`${inter.className} bg-gray-100`}>
+      <body suppressHydrationWarning className={`${inter.className} bg-gray-100`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

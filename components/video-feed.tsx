@@ -34,8 +34,8 @@ export function VideoFeed() {
 
   return (
     <div className="max-w-md mx-auto bg-white dark:bg-black min-h-screen">
-      {usersWithVideo.map((u) => (
-        <VideoCard key={u.id} user={u} />
+      {usersWithVideo.map((u, index) => (
+        <VideoCard key={`${u.id}-${index}`} user={u} />
       ))}
       {isLoading && (
         <div className="flex justify-center items-center py-8">

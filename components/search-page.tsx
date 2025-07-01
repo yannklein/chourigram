@@ -73,6 +73,7 @@ export function SearchPage() {
                   <Image
                     src={user.videoThumbnail || ""}
                     alt=""
+                    fill
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/10" />
@@ -121,6 +122,7 @@ export function SearchPage() {
                       <Image
                         src={user.videoThumbnail || ""}
                         alt=""
+                        fill
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-black/10" />
