@@ -72,8 +72,7 @@ export function SearchPage() {
               {users
                 .filter((u) => u.videoThumbnail)
                 .map((user, index) => (
-                 
-                    <SearchImage user={user} key={index}/>
+                  <SearchImage user={user} key={index} />
                 ))}
             </div>
           </div>
@@ -133,18 +132,7 @@ export function SearchPage() {
                     {filteredUsers
                       .filter((u) => u.videoThumbnail)
                       .map((user, index) => (
-                        <div
-                          key={user.id}
-                          className="aspect-square bg-gray-100 dark:bg-gray-900 relative"
-                        >
-                          <Image
-                            src={user.videoThumbnail || ''}
-                            alt=""
-                            fill
-                            className="w-full h-full object-cover"
-                          />
-                          <div className="absolute inset-0 bg-black/10" />
-                        </div>
+                        <SearchImage user={user} key={index} />
                       ))}
                   </div>
                 </div>

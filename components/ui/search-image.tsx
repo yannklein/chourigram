@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { VideoPlayer } from './video-player';
 import { useState } from 'react';
-import { X } from 'lucide-react';
 
 
 export const SearchImage = ({ user }: { user: any }) => {
