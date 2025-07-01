@@ -6,107 +6,173 @@
     "avatar": "assets/avatars/caio_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
-    "isVerified": false,
-    "followers": 565,
-    "following": 578
+    "isVerified": true,
+    "followers": 642,
+    "following": 930
   },
   {
     "id": "2",
+    "username": "chieri_avatar",
+    "displayName": "Chieri",
+    "avatar": "assets/avatars/chieri_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/chieri_thumbnail.jpg",
+    "video": "assets/videos/chieri_video.mp4",
+    "isVerified": true,
+    "followers": 621,
+    "following": 766
+  },
+  {
+    "id": "3",
     "username": "dani_avatar",
     "displayName": "Dani",
     "avatar": "assets/avatars/dani_avatar.jpg",
     "videoThumbnail": "assets/thumbnails/dani_thumbnail.jpg",
     "video": "assets/videos/dani_video.mp4",
     "isVerified": false,
-    "followers": 675,
-    "following": 765
+    "followers": 693,
+    "following": 339
   },
   {
-    "id": "3",
+    "id": "4",
+    "username": "dominique_avatar",
+    "displayName": "Dominique",
+    "avatar": "assets/avatars/dominique_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/dominique_thumbnail.jpg",
+    "video": "assets/videos/dominique_video.mp4",
+    "isVerified": false,
+    "followers": 685,
+    "following": 718
+  },
+  {
+    "id": "5",
     "username": "doug_avatar",
     "displayName": "Doug",
     "avatar": "assets/avatars/doug_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
     "isVerified": true,
-    "followers": 591,
-    "following": 1046
+    "followers": 578,
+    "following": 554
   },
   {
-    "id": "4",
+    "id": "6",
+    "username": "jacqueline_avatar",
+    "displayName": "Jacqueline",
+    "avatar": "assets/avatars/jacqueline_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/jacqueline_thumbnail.jpg",
+    "video": "assets/videos/jacqueline_video.mp4",
+    "isVerified": false,
+    "followers": 568,
+    "following": 475
+  },
+  {
+    "id": "7",
     "username": "jenny_avatar",
     "displayName": "Jenny",
     "avatar": "assets/avatars/jenny_avatar.jpg",
-    "videoThumbnail": null,
-    "video": null,
-    "isVerified": true,
-    "followers": 528,
-    "following": 452
+    "videoThumbnail": "assets/thumbnails/jenny_thumbnail.jpg",
+    "video": "assets/videos/jenny_video.mp4",
+    "isVerified": false,
+    "followers": 589,
+    "following": 241
   },
   {
-    "id": "5",
+    "id": "8",
     "username": "marcela_avatar",
     "displayName": "Marcela",
     "avatar": "assets/avatars/marcela_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
-    "isVerified": true,
-    "followers": 659,
-    "following": 792
+    "isVerified": false,
+    "followers": 627,
+    "following": 1050
   },
   {
-    "id": "6",
+    "id": "9",
+    "username": "morgane_avatar",
+    "displayName": "Morgane",
+    "avatar": "assets/avatars/morgane_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/morgane_thumbnail.jpg",
+    "video": "assets/videos/morgane_video.mp4",
+    "isVerified": true,
+    "followers": 575,
+    "following": 235
+  },
+  {
+    "id": "10",
+    "username": "natty_avatar",
+    "displayName": "Natty",
+    "avatar": "assets/avatars/natty_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/natty_thumbnail.jpg",
+    "video": "assets/videos/natty_video.mp4",
+    "isVerified": true,
+    "followers": 535,
+    "following": 578
+  },
+  {
+    "id": "11",
     "username": "patty_avatar",
     "displayName": "Patty",
     "avatar": "assets/avatars/patty_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
-    "isVerified": true,
-    "followers": 520,
-    "following": 964
+    "isVerified": false,
+    "followers": 686,
+    "following": 180
   },
   {
-    "id": "7",
+    "id": "12",
     "username": "sergio_avatar",
     "displayName": "Sergio",
     "avatar": "assets/avatars/sergio_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
-    "isVerified": false,
-    "followers": 584,
-    "following": 1007
+    "isVerified": true,
+    "followers": 576,
+    "following": 731
   },
   {
-    "id": "8",
+    "id": "13",
     "username": "sylvain_avatar",
     "displayName": "Sylvain",
     "avatar": "assets/avatars/sylvain_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
     "isVerified": true,
-    "followers": 505,
-    "following": 252
+    "followers": 566,
+    "following": 564
   },
   {
-    "id": "9",
+    "id": "14",
+    "username": "will_avatar",
+    "displayName": "Will",
+    "avatar": "assets/avatars/will_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/will_thumbnail.jpg",
+    "video": "assets/videos/will_video.mp4",
+    "isVerified": false,
+    "followers": 645,
+    "following": 873
+  },
+  {
+    "id": "15",
     "username": "yako_avatar",
     "displayName": "Yako",
     "avatar": "assets/avatars/yako_avatar.jpg",
     "videoThumbnail": "assets/thumbnails/yako_thumbnail.jpg",
     "video": "assets/videos/yako_video.mp4",
-    "isVerified": true,
-    "followers": 618,
-    "following": 217
+    "isVerified": false,
+    "followers": 531,
+    "following": 976
   },
   {
-    "id": "10",
+    "id": "16",
     "username": "yann_avatar",
     "displayName": "Yann",
     "avatar": "assets/avatars/yann_avatar.jpg",
     "videoThumbnail": null,
     "video": null,
     "isVerified": false,
-    "followers": 594,
-    "following": 1034
+    "followers": 665,
+    "following": 552
   }
 ]
