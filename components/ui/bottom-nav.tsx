@@ -18,7 +18,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
+    <div className="max-w-md mx-auto fixed bottom-0 left-0 right-0 z-50 bg-white/95 dark:bg-black/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-md mx-auto px-2 py-2">
         <div className="flex items-center justify-around">
           {tabs.map(({ id, icon: Icon, label }) => (

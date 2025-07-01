@@ -63,7 +63,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black">
+    <div className="max-w-md mx-auto min-h-screen bg-gray-50 dark:bg-black">
       <TopNav />
       <div className="pt-16 pb-20">
         {renderContent()}
