@@ -93,7 +93,7 @@ export function VideoPlayer({
     >
       <video
         ref={videoRef}
-        src={src}
+        src={src + "#t=0.001"}
         poster={thumbnail}
         autoPlay={autoplay}
         muted={isMuted}
