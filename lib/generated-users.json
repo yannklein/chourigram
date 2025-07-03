@@ -133,6 +133,17 @@
   },
   {
     "id": "13",
+    "username": "samantha_avatar",
+    "displayName": "Samantha",
+    "avatar": "assets/avatars/samantha_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/samantha_thumbnail.jpg",
+    "video": "assets/videos/samantha_video.mp4",
+    "isVerified": false,
+    "followers": 0,
+    "following": 0
+  },
+  {
+    "id": "14",
     "username": "sergio_avatar",
     "displayName": "Sergio",
     "avatar": "assets/avatars/sergio_avatar.jpg",
@@ -143,7 +154,7 @@
     "following": 0
   },
   {
-    "id": "14",
+    "id": "15",
     "username": "sylvain_avatar",
     "displayName": "Sylvain",
     "avatar": "assets/avatars/sylvain_avatar.jpg",
@@ -154,7 +165,7 @@
     "following": 0
   },
   {
-    "id": "15",
+    "id": "16",
     "username": "will_avatar",
     "displayName": "Will",
     "avatar": "assets/avatars/will_avatar.jpg",
@@ -165,7 +176,7 @@
     "following": 0
   },
   {
-    "id": "16",
+    "id": "17",
     "username": "yako_avatar",
     "displayName": "Yako",
     "avatar": "assets/avatars/yako_avatar.jpg",
@@ -176,7 +187,7 @@
     "following": 0
   },
   {
-    "id": "17",
+    "id": "18",
     "username": "yann_avatar",
     "displayName": "Yann",
     "avatar": "assets/avatars/yann_avatar.jpg",
