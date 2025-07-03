@@ -56,6 +56,17 @@
   },
   {
     "id": "6",
+    "username": "drayson_avatar",
+    "displayName": "Drayson",
+    "avatar": "assets/avatars/drayson_avatar.jpg",
+    "videoThumbnail": "assets/thumbnails/drayson_thumbnail.jpg",
+    "video": "assets/videos/drayson_video.mp4",
+    "isVerified": false,
+    "followers": 0,
+    "following": 0
+  },
+  {
+    "id": "7",
     "username": "jacqueline_avatar",
     "displayName": "Jacqueline",
     "avatar": "assets/avatars/jacqueline_avatar.jpg",
@@ -66,7 +77,7 @@
     "following": 0
   },
   {
-    "id": "7",
+    "id": "8",
     "username": "jenny_avatar",
     "displayName": "Jenny",
     "avatar": "assets/avatars/jenny_avatar.jpg",
@@ -77,7 +88,7 @@
     "following": 0
   },
   {
-    "id": "8",
+    "id": "9",
     "username": "joerg_avatar",
     "displayName": "Joerg",
     "avatar": "assets/avatars/joerg_avatar.jpg",
@@ -88,7 +99,7 @@
     "following": 0
   },
   {
-    "id": "9",
+    "id": "10",
     "username": "marcela_avatar",
     "displayName": "Marcela",
     "avatar": "assets/avatars/marcela_avatar.jpg",
@@ -99,7 +110,7 @@
     "following": 0
   },
   {
-    "id": "10",
+    "id": "11",
     "username": "morgane_avatar",
     "displayName": "Morgane",
     "avatar": "assets/avatars/morgane_avatar.jpg",
@@ -110,7 +121,7 @@
     "following": 0
   },
   {
-    "id": "11",
+    "id": "12",
     "username": "natty_avatar",
     "displayName": "Natty",
     "avatar": "assets/avatars/natty_avatar.jpg",
@@ -121,7 +132,7 @@
     "following": 0
   },
   {
-    "id": "12",
+    "id": "13",
     "username": "patty_avatar",
     "displayName": "Patty",
     "avatar": "assets/avatars/patty_avatar.jpg",
@@ -132,7 +143,7 @@
     "following": 0
   },
   {
-    "id": "13",
+    "id": "14",
     "username": "samantha_avatar",
     "displayName": "Samantha",
     "avatar": "assets/avatars/samantha_avatar.jpg",
@@ -143,7 +154,7 @@
     "following": 0
   },
   {
-    "id": "14",
+    "id": "15",
     "username": "sergio_avatar",
     "displayName": "Sergio",
     "avatar": "assets/avatars/sergio_avatar.jpg",
@@ -154,7 +165,7 @@
     "following": 0
   },
   {
-    "id": "15",
+    "id": "16",
     "username": "sylvain_avatar",
     "displayName": "Sylvain",
     "avatar": "assets/avatars/sylvain_avatar.jpg",
@@ -165,7 +176,7 @@
     "following": 0
   },
   {
-    "id": "16",
+    "id": "17",
     "username": "will_avatar",
     "displayName": "Will",
     "avatar": "assets/avatars/will_avatar.jpg",
@@ -176,7 +187,7 @@
     "following": 0
   },
   {
-    "id": "17",
+    "id": "18",
     "username": "yako_avatar",
     "displayName": "Yako",
     "avatar": "assets/avatars/yako_avatar.jpg",
@@ -187,7 +198,7 @@
     "following": 0
   },
   {
-    "id": "18",
+    "id": "19",
     "username": "yann_avatar",
     "displayName": "Yann",
     "avatar": "assets/avatars/yann_avatar.jpg",
