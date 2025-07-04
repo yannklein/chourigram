@@ -98,7 +98,7 @@ export function VideoPlayer({
         autoPlay={autoplay}
         muted={isMuted}
         loop
-        className="w-full h-full object-fill"
+        className="w-full h-full"
         playsInline
       />
       
